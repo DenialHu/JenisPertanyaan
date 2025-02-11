@@ -5,7 +5,7 @@ import tensorflow as tf
 import re
 import pickle
 import nltk
-
+import requests
 from tensorflow import keras
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from nltk.corpus import stopwords
