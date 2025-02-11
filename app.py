@@ -1,12 +1,3 @@
-# requirements.txt
-"""
-numpy==1.24.3
-scikit-learn==1.2.2
-tensorflow==2.14.0
-streamlit==1.29.0
-nltk==3.8.1
-pandas==2.0.3
-"""
 
 # app.py
 import streamlit as st
