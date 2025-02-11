@@ -34,15 +34,9 @@ model_prediksi = keras.models.load_model('sentimen_model.h5')
 
 with open('tokenizer.pkl', 'rb') as handle:
     tokenizer = pickle.load(handle)
-
-# Load label_encoder.pkl from GitHub raw URL
-LABEL_ENCODER_URL = "https://github.com/DenialHu/JenisPertanyaan/raw/main/label_encoder.pkl"
-response = requests.get(LABEL_ENCODER_URL)
-
-if response.status_code == 200:
-    label_encoder = pickle.loads(response.content)
-else:
-    raise Exception(f"Failed to fetch label_encoder.pkl from GitHub. Status code: {response.status_code}")
+    
+with open('label_encoderA.pkl', 'rb') as handle:
+    maxlen = pickle.load(handle)
 
 # Load maxlen.pkl
 with open('maxlen.pkl', 'rb') as handle:
